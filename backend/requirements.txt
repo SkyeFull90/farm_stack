@@ -1,0 +1,10 @@
+# fastapi==0.111.0
+fastapi
+# uvicorn==0.29.0.post1
+uvicorn
+# motor==3.4.0
+motor
+# python-dotenv==1.0.1
+python-dotenv
+# pydantic==2.7.1
+pydantic
