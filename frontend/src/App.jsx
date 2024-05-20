@@ -1,13 +1,24 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import axios from 'axios'
+
 
 function App() {
   const [todoList, setTodoList] = useState([{}])
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
 
+  useEffect(() => {
+    axios.get('/api/todo')
+      .then(res => {
+        setTodoList(res.data)
+      })
+  })
 
-
+  const addToDoHandler = () => {
+    axios.post('/api/todo', { 'title': title, 'description': desc})
+      .then(res => console.log(res))
+  }
 
   return (
     <>
