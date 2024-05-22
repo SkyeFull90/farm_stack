@@ -34,22 +34,7 @@ function App() {
             <button value="Submit" className='btn'>Add task</button>
         </div>
         <div className="overflow-x-auto">
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Delete Todo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Title</td>
-                <td>Description</td>
-                <td><button type="submit" className='btn btn-outline btn-error'>X</button></td>
-              </tr>
-            </tbody>
-          </table>
+         
         </div>
       </div>
     </>
