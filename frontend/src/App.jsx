@@ -32,7 +32,7 @@ function App() {
         <div className='m-10 card-actions'>
             <input type="text" placeholder='title' onChange={event => setTitle(event.target.value)} className='input input-borderd w-full max-w-xs'/>
             <input type="text" placeholder='description' onChange={event => setDesc(event.target.value)} className='input input-bordered w-full max-w-xs'/>
-            <button value="Submit" className='btn'>Add task</button>
+            <button value="Submit" className='btn' onClick={addToDoHandler} >Add task</button>
         </div>
         <div className="overflow-x-auto">
          <TodoView todoList={todoList} />
