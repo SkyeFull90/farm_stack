@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import TodoView from './components/TodoListView'
 import axios from 'axios'
 
 
@@ -29,12 +30,12 @@ function App() {
            <h2 className='mb-6'>Hello World!</h2>
         </section>
         <div className='m-10 card-actions'>
-            <input type="text" placeholder='title'className='input input-borderd w-full max-w-xs'/>
-            <input type="text" placeholder='description' className='input input-bordered w-full max-w-xs'/>
+            <input type="text" placeholder='title' onChange={event => setTitle(event.target.value)} className='input input-borderd w-full max-w-xs'/>
+            <input type="text" placeholder='description' onChange={event => setDesc(event.target.value)} className='input input-bordered w-full max-w-xs'/>
             <button value="Submit" className='btn'>Add task</button>
         </div>
         <div className="overflow-x-auto">
-         
+         <TodoView todoList={todoList} />
         </div>
       </div>
     </>
