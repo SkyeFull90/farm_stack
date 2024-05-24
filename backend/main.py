@@ -1,18 +1,18 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pathlib import Path
-from fastapi.middleware.cors import CORSMiddleware
+# from fastapi.middleware.cors import CORSMiddleware
 from model import Todo
 from database import fetch_one_todo, fetch_all_todos, create_todo, update_todo, remove_todo
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-"""
-""" 
+
+
 app.mount("/static", StaticFiles(directory="build/static"), name="static")
 
-
+"""
 origins = [
     "http://localhost:5173",
     "http://localhost:3000",
@@ -26,7 +26,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )    
-   
+"""    
 
 
 @app.get("/")
